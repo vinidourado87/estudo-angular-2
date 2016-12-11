@@ -6,4 +6,3 @@ import { PainelComponent } from './painel.component';
     exports: [ PainelComponent ]
 })
 export class PainelModule{ }
- 
