@@ -17,7 +17,7 @@ export class CadastroComponent {
     constructor(http: Http, formBuilder: FormBuilder) {
         this.http = http;
         this.meuForm = formBuilder.group({
-            titulo: [ '', Validators.required ],
+            titulo: [ '', Validators.compose([Validators.required, Validators.minLength(4)]) ],
             url: [ '', Validators.required ],
             descricao: [ '' ]
         });
