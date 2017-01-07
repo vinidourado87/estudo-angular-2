@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import { FotoComponent } from '../foto/foto.component';
 
 @Component({
     moduleId: module.id,
@@ -7,4 +8,15 @@ import {Component, Input} from '@angular/core';
 })
 export class CadastroComponent {
 
+    foto: FotoComponent = new FotoComponent();
+
+    constructor() {
+        this.foto.titulo = "Titulo";
+        this.foto.url = "www.teste.com.br";
+        this.foto.descricao = "Desc";
+    }
+
+    cadastrar(event) {
+        event.preventDefault();
+    }
 }
